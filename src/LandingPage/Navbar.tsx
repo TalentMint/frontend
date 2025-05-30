@@ -1,12 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { navLinks } from "./navLinks";
 import ReusableButton from "../Components/Button";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+  const handleScroll = () => {
+    if (headerRef.current) {
+      // Example condition: change background after scrolling 100px
+      if (window.scrollY > 80) {
+        headerRef.current.classList.add('backdrop-blur', 'text-black');
+        headerRef.current.classList.remove('bg-transparent', 'text-white');
+        // setLogoSrc('/assets/EMTA-logo-black.png');
+      } else {
+        headerRef.current.classList.add('text-white', 'bg-transparent');
+        headerRef.current.classList.remove('backdrop-blur', 'text-black');
+        // setLogoSrc('/assets/EMTA-logo-white.png');
+      }
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  // Clean up event listener on unmount
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
 
   return (
-    <nav className="w-full bg-transparent fixed top-0 left-0 z-50">
+    <nav ref={headerRef} className="w-full bg-transparent fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           

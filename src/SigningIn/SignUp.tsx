@@ -1,6 +1,7 @@
 import React from "react";
-import ReusableButton from "../Components/Button";
+// import ReusableButton from "../Components/Button";
 import { Link } from "react-router-dom";
+import { ConnectButton } from "@mysten/dapp-kit";
 
 const SignupPage: React.FC = () => {
   return (
@@ -10,7 +11,9 @@ const SignupPage: React.FC = () => {
           Sign Up
         </h1>
 
-        <ReusableButton label="Connect Wallet" className="w-full rounded-[20px]" to=""/>
+        {/* <ReusableButton label="Connect Wallet" className="w-full rounded-[20px]" to=""/> */}
+
+        <ConnectButton className="w-full rounded-[20px] shadow-none text-[#65007D]" />
 
         <div className="flex items-center">
           <hr className="flex-grow border-gray-700" />
