@@ -4,6 +4,7 @@ import ExplorePage from "../LandingPage/Explore"
 import Footer from "../LandingPage/Footer"
 import HowItWorks from "../LandingPage/HowItWorks"
 import SignupPage from "../SigningIn/SignUp"
+import Sidebar from "../UserAccount/Sidebar"
 
 
 function Home() {
@@ -20,9 +21,11 @@ function Home() {
       </div>
       <ExplorePage />
       <SignupPage />
+      <Sidebar />
       <Footer />
    </div>
   )
 }
 
 export default Home
+ 
