@@ -26,7 +26,7 @@ const steps = [
 
 const HowItWorks: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-r text-white py-20 px-4">
+    <section id="how-it-works" className="relative bg-gradient-to-r text-white py-20 px-4">
       <motion.div 
         initial={{opacity: 0, y: 100}}
         whileInView={{opacity: 1, y: 0}}

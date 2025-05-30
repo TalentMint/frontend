@@ -21,8 +21,9 @@ function Home() {
       <ExplorePage />
       <SignupPage />
       <Footer />
-   </div>
+    </div>
   )
 }
 
 export default Home
+ 
