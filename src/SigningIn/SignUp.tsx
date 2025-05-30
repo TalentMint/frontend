@@ -13,7 +13,7 @@ const SignupPage: React.FC = () => {
 
         {/* <ReusableButton label="Connect Wallet" className="w-full rounded-[20px]" to=""/> */}
 
-        <ConnectButton className="w-full rounded-[20px]" />
+        <ConnectButton className="w-full rounded-[20px] shadow-none text-[#65007D]" />
 
         <div className="flex items-center">
           <hr className="flex-grow border-gray-300" />
