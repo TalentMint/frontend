@@ -28,25 +28,25 @@ const Sidebar: React.FC = () => {
 
             <nav className="space-y-3">
                 <NavLink
-                    to="/dashboard/explore"
+                    to="/dashboard"
                     className="flex items-center gap-3 hover:text-white"
                 >
                     <i className="fas fa-home w-5 h-5"></i> Explore
                 </NavLink>
                 <NavLink
-                    to="/dashboard/create"
+                    to="createnft"
                     className="flex items-center gap-3 hover:text-white"
                 >
                     <i className="fas fa-plus-circle w-5 h-5"></i> Create NFT
                 </NavLink>
                 <NavLink
-                    to="/dashboard/my"
+                    to="my"
                     className="flex items-center gap-3 hover:text-white"
                 >
                     <i className="fas fa-th-large w-5 h-5"></i> My Creations
                 </NavLink>
                 <NavLink
-                    to="/dashboard/bought"
+                    to="bought"
                     className="flex items-center gap-3 hover:text-white"
                 >
                     <i className="fas fa-heart w-5 h-5"></i> Bought NFTs
