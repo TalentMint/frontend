@@ -1,0 +1,1 @@
+export const serverUrl = "https://server-l73u.onrender.com/api/v1"
