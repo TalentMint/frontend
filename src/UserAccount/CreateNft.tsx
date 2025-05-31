@@ -2,7 +2,7 @@ import React from "react";
 
 const CreateNFT: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white px-4">
+    <div className="h-screen overflow-y-scroll no-scrollbar flex items-center justify-center bg-gray-900 text-white px-4">
       <div className="w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold text-center mb-6">Create Your Own NFT</h2>
         
