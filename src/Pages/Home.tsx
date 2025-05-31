@@ -4,7 +4,7 @@ import ExplorePage from "../LandingPage/Explore"
 import Footer from "../LandingPage/Footer"
 import HowItWorks from "../LandingPage/HowItWorks"
 import SignupPage from "../SigningIn/SignUp"
-
+import Dashboard from "./Dashboard"
 
 function Home() {
 
@@ -21,6 +21,7 @@ function Home() {
       <ExplorePage />
       <SignupPage />
       <Footer />
+      <Dashboard />
     </div>
   )
 }
