@@ -9,15 +9,12 @@ const Navbar: React.FC = () => {
   useEffect(() => {
   const handleScroll = () => {
     if (headerRef.current) {
-      // Example condition: change background after scrolling 100px
       if (window.scrollY > 80) {
         headerRef.current.classList.add('backdrop-blur', 'text-black');
         headerRef.current.classList.remove('bg-transparent', 'text-white');
-        // setLogoSrc('/assets/EMTA-logo-black.png');
       } else {
         headerRef.current.classList.add('text-white', 'bg-transparent');
         headerRef.current.classList.remove('backdrop-blur', 'text-black');
-        // setLogoSrc('/assets/EMTA-logo-white.png');
       }
     }
   };
