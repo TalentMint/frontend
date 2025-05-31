@@ -1,11 +1,10 @@
-import { useCurrentAccount, useDisconnectWallet } from "@mysten/dapp-kit";
+import { useCurrentAccount } from "@mysten/dapp-kit";
 import React, { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
   const account = useCurrentAccount();
   const navigate = useNavigate();
-  const disconnectWallet = useDisconnectWallet();
 
   useEffect(() => {
     if(!account){
@@ -47,7 +46,7 @@ const Sidebar: React.FC = () => {
           <NavLink to="/settings" className="flex items-center gap-3 hover:text-white">
             <i className="fas fa-cog w-5 h-5"></i> Settings
           </NavLink>
-          <div onClick={() => disconnectWallet} className="flex items-center hover:cursor-pointer gap-3 hover:text-white">
+          <div className="flex items-center hover:cursor-pointer gap-3 hover:text-white">
             <i className="fas fa-sign-out-alt w-5 h-5"></i> Log Out
           </div>
         </nav>
