@@ -19,9 +19,6 @@ export const RegisterEnokiWallets = () => {
 				facebook: {
 					clientId: 'YOUR_FACEBOOK_CLIENT_ID',
 				},
-				twitch: {
-					clientId: 'YOUR_TWITCH_CLIENT_ID',
-				},
 			},
 			client,
 			network,
