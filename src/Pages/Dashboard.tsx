@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => (
     <div className="flex-1 flex flex-col">
       <Topbar />
 
-      <main className="p-4 space-y-6 flex-1 overflow-y-scroll">
+      <main className="p-4 space-y-6 flex-1 overflow-y-scroll no-scrollbar">
         {/* Trending Section */}
         <section>
           <h2 className="text-xl text-white font-semibold mb-1">Trending</h2>
