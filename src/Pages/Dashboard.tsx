@@ -13,13 +13,13 @@ const dummyData = Array.from({ length: 12 }).map((_, i) => ({
 }));
 
 const Dashboard: React.FC = () => (
-  <div className="flex bg-gray-900 min-h-screen">
+  <div className="flex bg-gray-900 h-screen">
     <Sidebar />
 
     <div className="flex-1 flex flex-col">
       <Topbar />
 
-      <main className="p-4 space-y-6 flex-1 overflow-auto">
+      <main className="p-4 space-y-6 flex-1 overflow-y-scroll">
         {/* Trending Section */}
         <section>
           <h2 className="text-xl text-white font-semibold mb-1">Trending</h2>
