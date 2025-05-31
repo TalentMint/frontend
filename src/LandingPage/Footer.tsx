@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
               <span>contact@talentmint.io</span>
             </li>
           </ul>
-          <button className="mt-4 bg-white hover:bg-white-200 text-white px-5 py-2 rounded-md text-sm font-medium">
+          <button className="mt-4 bg-white hover:bg-white-200 text-gray-900 px-5 py-2 rounded-md text-sm font-medium">
             Sign In
           </button>
         </div>

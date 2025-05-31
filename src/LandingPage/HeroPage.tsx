@@ -20,7 +20,6 @@ const HomePage: React.FC = () => {
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-          <ReusableButton label="Get Started" to=""/>
           <Link to='/signup' className="w-full md:w-auto border border-[#8B00AB] text-[#8B00AB] hover:bg-white px-6 py-3 rounded-md text-sm font-semibold">
             Get Started
           </Link>
