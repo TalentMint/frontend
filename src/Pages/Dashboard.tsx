@@ -2,8 +2,8 @@
 import React from "react";
 import Sidebar from "../UserAccount/Sidebar"
 import Topbar from "../UserAccount/Topbar"
-import FilterTabs from "../UserAccount/FilterTab"
-import NFTCard from "../UserAccount/NftCard"
+// import FilterTabs from "../UserAccount/FilterTab"
+// import NFTCard from "../UserAccount/NftCard"
 import { Outlet } from "react-router";
 
 

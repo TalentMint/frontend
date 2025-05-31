@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"
-import ReusableButton from "../Components/Button";
+// import ReusableButton from "../Components/Button";
 import { Link } from "react-router";
 
 const HomePage: React.FC = () => {
