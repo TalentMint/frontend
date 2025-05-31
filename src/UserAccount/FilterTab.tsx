@@ -8,7 +8,7 @@ const FilterTabs: React.FC = () => (
     {tabs.map((tab) => (
       <button
         key={tab}
-        className="text-sm px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600"
+        className="text-white px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600"
       >
         {tab}
       </button>

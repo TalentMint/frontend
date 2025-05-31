@@ -22,12 +22,13 @@ const CreateNFT: React.FC = () => {
             placeholder="Category"
             className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md"
           />
-{/* 
+
           <input
-            type="text"
+            type="file"
             placeholder="Image URL"
             className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md"
-          /> */}
+          /> 
+          
           <textarea
             placeholder="Description"
             className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md resize-none"
