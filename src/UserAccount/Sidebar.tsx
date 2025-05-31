@@ -1,7 +1,18 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import { useCurrentAccount, useDisconnectWallet } from "@mysten/dapp-kit";
+import React, { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
+  const account = useCurrentAccount();
+  const navigate = useNavigate();
+  const disconnectWallet = useDisconnectWallet();
+
+  useEffect(() => {
+    if(!account){
+      navigate('/signup');
+    }
+  }, [account, navigate]);
+
   return (
     <aside className="hidden lg:flex flex-col w-60 bg-gray-900 text-gray-300 p-6 space-y-6">
       <h1 className="text-2xl font-bold text-white mb-4">TalentMint</h1>
@@ -36,9 +47,9 @@ const Sidebar: React.FC = () => {
           <NavLink to="/settings" className="flex items-center gap-3 hover:text-white">
             <i className="fas fa-cog w-5 h-5"></i> Settings
           </NavLink>
-          <NavLink to="/logout" className="flex items-center gap-3 hover:text-white">
+          <div onClick={() => disconnectWallet} className="flex items-center hover:cursor-pointer gap-3 hover:text-white">
             <i className="fas fa-sign-out-alt w-5 h-5"></i> Log Out
-          </NavLink>
+          </div>
         </nav>
       </div>
     </aside>

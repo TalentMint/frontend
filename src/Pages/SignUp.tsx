@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import ReusableButton from "../Components/Button";
 import { Link } from "react-router-dom";
-import { ConnectButton } from "@mysten/dapp-kit";
+import { ConnectButton, useCurrentAccount } from "@mysten/dapp-kit";
+import { useNavigate } from "react-router";
+import Footer from "../LandingPage/Footer";
 
 const SignupPage: React.FC = () => {
+  const account = useCurrentAccount();
+  const navigate = useNavigate();
+  // const connectWallet = useConnectWallet();
+
+  useEffect(() => {
+    if (account) {
+      navigate('/dashboard');
+    } else {
+      navigate('/signup');
+    }
+  }, [account, navigate]);
+
   return (
-    <div className="min-h-screen flex items-center justify-center  px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center pt-10 px-4">
       <div className="max-w-md w-full bg-gray-300 rounded-lg shadow-md p-8 space-y-6">
         <h1 className="text-2xl font-bold text-center">
           Sign Up
         </h1>
 
-        {/* <ReusableButton label="Connect Wallet" className="w-full rounded-[20px]" to=""/> */}
+        {/* <ReusableButton onClick={connectWallet} label="Connect Wallet" className="w-full rounded-[20px]" to=""/> */}
 
         <ConnectButton className="w-full rounded-[20px] shadow-none text-[#65007D]" />
 
@@ -47,6 +61,7 @@ const SignupPage: React.FC = () => {
           </Link>.
         </p>
       </div>
+      <Footer />
     </div>
   );
 };

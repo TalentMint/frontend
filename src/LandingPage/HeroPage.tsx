@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion"
 import ReusableButton from "../Components/Button";
+import { Link } from "react-router";
 
 const HomePage: React.FC = () => {
   return (
@@ -20,9 +21,9 @@ const HomePage: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-4">
           <ReusableButton label="Get Started" to=""/>
-          <button className="w-full md:w-auto border border-[#8B00AB] text-[#8B00AB] hover:bg-white px-6 py-3 rounded-md text-sm font-semibold">
+          <Link to='/signup' className="w-full md:w-auto border border-[#8B00AB] text-[#8B00AB] hover:bg-white px-6 py-3 rounded-md text-sm font-semibold">
             Get Started
-          </button>
+          </Link>
         </div>
       </motion.div>
     </section>
